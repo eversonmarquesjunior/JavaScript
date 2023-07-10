@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições</title>
+    <script src="if-else.js"></script>
+
+    <style>
+        input#txtvel{
+            width: 50px;
+        }
+        input#txtidade{
+            width: 50px;
+        }
+    </style>
+
+</head>
+<body>
+    <center>
+    <h1>Sistema de Multas</h1>
+    Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> KM/h.
+    <input type="button" value="CONFERIR MULTA" onclick="conferirMulta()">
+    <h4><div id="situacao"></div></h4>
+
+    <br>
+
+    <h1>Sistema de Votação</h1>
+    Digite sua idade: <input type="text" name="txtidade" id="txtidade"> anos.
+    <input type="button" value="CONFERIR" onclick="conferirIdade()">
+    <h4><div id="anos"></div></h4>
+    <h4><div id="votacao"></div></h4>
+    </center>
+</body>
+</html>

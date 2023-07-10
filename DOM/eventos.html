@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body{
+            background-color: white;
+            color: black;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        div{
+            font: normal 20pt Arial;
+            background-color: blue;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+        }
+    </style>
+
+    <title>Eventos DOM</title>
+</head>
+<body>
+    <center>
+    <div id = "mensagem" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"> <!--eventos por HTML-->
+        INTERAGIR
+    </div>
+    <br>
+    <div id = "raiz">64</div>
+    <br>
+    <button id = "m" onclick="media()">Calcule sua média</button>
+    </center>
+
+    <script>
+        var r = document.getElementById("raiz")     //eventos por java script
+        r.addEventListener("click", clicarRaiz)
+        r.addEventListener("mouseout", sairRaiz)
+
+        function clicarRaiz(){
+            r.innerHTML = "Raiz de 64 é: 8"
+            r.style.color = "red"
+        }
+
+        function sairRaiz(){
+            r.innerHTML = "64"
+            r.style.color = "white"
+        }
+
+        var msg = document.getElementById("mensagem")
+
+        function clicar(){
+            msg.innerHTML = "CLICOU"          //innerHTML = muda o conteúdo de um element
+            msg.style.background = "black"
+        }
+
+
+        function entrar(){
+            msg.innerHTML = "ENTROU"
+        }
+
+        function sair(){
+            msg.innerHTML = "SAIU"
+            msg.style.background = "blue"
+        }
+
+        function media(){
+            var n1 = prompt("Digite a primeira nota: ")
+            var n2 = prompt("Digite a segunda nota: ")
+            alert("Sua média é: " +n1/n2)
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body{
+            background-color: white;
+            color: black;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        h1{
+            color: rgb(255, 68, 68);
+        }
+    </style>
+
+    <title>DOM - Selecionar Elementos</title>
+</head>
+<body>
+    <h1 style="background-color: black;">Olá Mundo!</h1>
+    <h1>DOM (Document Object Model)</h1>
+    <p>Testando parágrafo número <span style="color: blue">1</span></p>
+    <div class = "result">Resultado</div>
+    <br>
+    <div id = "botao">Clique aqui</div>         <!-- id = "botao" / name = "botao" / class = "botao"-->
+    <br>
+    <div id = "query">Query Selector</div>
+    <br>
+
+    <script>
+        var p1 = document.getElementsByTagName("p")[0]      //seleção por tag
+        document.write("Conteúdo do parágrafo: " +p1.innerHTML)
+
+        var msg = document.getElementById("botao")          //seleção por id, name ou class
+        msg.style.backgroundColor = "yellow"
+        msg.style.fontStyle = "italic"
+
+        var q = document.querySelector("div#query")         // id = # 
+        q.style.color = "aqua"                              //querySelector substitui todos os outros
+        q.style.backgroundColor = "black"
+
+        var r = document.querySelector("div.result")        //class = .
+        r.style.color = "pink"
+        r.style.backgroundColor = "blue"
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+<style>
+    h1{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        background-color: red;
+        width: 300px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    div{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        background-color: black;
+        color: white;
+        width: 200px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    input{
+        width: 100px;
+    }
+</style>
+
+<body>
+    <center>
+    <h1>CALCULADORA</h1>
+    <br>
+    <input type="number" name="texto1" id="texto1"> +
+    <input type="number" name="texto2" id="texto2">
+    <input type="button" value="SOMAR" id="somar" onclick="adicao()">
+    <input type="button" value="LIMPAR"onclick="limparAdicao()">
+    <br>
+    <h4><div id="resultsoma">RESULTADO:</div></h4>
+
+    <br>
+
+    <input type="number" name="texto3" id="texto3"> +
+    <input type="number" name="texto4" id="texto4">
+    <input type="button" value="SUBTRAIR" id="subtrair" onclick="subtracao()">
+    <input type="button" value="LIMPAR"onclick="limparSubtracao()">
+    <br>
+    <h4><div id="resultsub">RESULTADO:</div></h4>
+
+    <br>
+
+    <input type="number" name="texto5" id="texto5"> +
+    <input type="number" name="texto6" id="texto6">
+    <input type="button" value="MULTIPLICAR" id="multiplicar" onclick="multiplicacao()">
+    <input type="button" value="LIMPAR"onclick="limparMultiplicacao()">
+    <br>
+    <h4><div id="resultmult">RESULTADO:</div></h4>
+
+    <br>
+
+    <input type="number" name="texto7" id="texto7"> +
+    <input type="number" name="texto8" id="texto8">
+    <input type="button" value="DIVIDIR" id="dividir" onclick="divisao()">
+    <input type="button" value="LIMPAR"onclick="limparDivisao()">
+    <br>
+    <h4><div id="resultdiv">RESULTADO:</div></h4>
+    </center>
+</body>
+
+<script>
+
+    function adicao(){
+        var cx1 = document.querySelector("input#texto1")
+        var cx2 = document.querySelector("input#texto2")
+        var resultsoma = document.getElementById("resultsoma")
+
+        var n1 = Number(cx1.value)      //transformando a string do input em valor inteiro
+        var n2 = Number(cx2.value)
+        var soma = n1 + n2
+
+        resultsoma.innerHTML = "RESULTADO: " +soma
+    }
+
+    function limparAdicao() {
+        var cx1 = document.querySelector("input#texto1");
+        var cx2 = document.querySelector("input#texto2");
+        var resultsoma = document.getElementById("resultsoma");
+
+        cx1.value = "";
+        cx2.value = "";
+        resultsoma.innerHTML = "RESULTADO: ";
+    }
+
+    function subtracao(){
+        var cx3 = document.querySelector("input#texto3")
+        var cx4 = document.querySelector("input#texto4")
+        var resultsub = document.getElementById("resultsub")
+
+        var n3 = Number(cx3.value)
+        var n4 = Number(cx4.value)
+        var sub = n3 - n4
+
+        resultsub.innerHTML = "RESULTADO: " +sub
+    }
+
+    function limparSubtracao() {
+        var cx3 = document.querySelector("input#texto3");
+        var cx4 = document.querySelector("input#texto4");
+        var resultsub = document.getElementById("resultsub");
+
+        cx3.value = "";
+        cx4.value = "";
+        resultsub.innerHTML = "RESULTADO: ";
+    }
+
+    function multiplicacao(){
+        var cx5 = document.querySelector("input#texto5")
+        var cx6 = document.querySelector("input#texto6")
+        var resultmult = document.getElementById("resultmult")
+
+        var n5 = Number(cx5.value)
+        var n6 = Number(cx6.value)
+        mult = n5 * n6
+
+        resultmult.innerHTML = "RESULTADO: " +mult
+    }
+
+    function limparMultiplicacao() {
+        var cx5 = document.querySelector("input#texto5");
+        var cx6 = document.querySelector("input#texto6");
+        var resultmult = document.getElementById("resultmult");
+
+        cx5.value = "";
+        cx6.value = "";
+        resultmult.innerHTML = "RESULTADO: ";
+    }
+
+    function divisao(){
+        var cx7 = document.querySelector("input#texto7")
+        var cx8 = document.querySelector("input#texto8")
+        var resultdiv = document.getElementById("resultdiv")
+
+        var n7 = Number(cx7.value)
+        var n8 = Number(cx8.value)
+        div = n7 / n8
+
+        resultdiv.innerHTML = "RESULTADO: " +div
+    }
+
+    function limparDivisao() {
+        var cx7 = document.querySelector("input#texto7");
+        var cx8 = document.querySelector("input#texto8");
+        var resultdiv = document.getElementById("resultdiv");
+
+        cx7.value = "";
+        cx8.value = "";
+        resultdiv.innerHTML = "RESULTADO: ";
+    }
+</script>
+</html>

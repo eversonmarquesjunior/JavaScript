@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body{
+            background-color: white;
+            color: black;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        h1{
+            color: rgb(255, 68, 68);
+        }
+    </style>
+
+    <title>Variáveis</title>
+</head>
+<body>
+    <h1>Olá Mundo!</h1>
+    <p>Variáveis</p>
+
+    <script>
+        
+        /*var n1 = Number(prompt("Digite um número: "))
+        var n2 = Number(prompt("Digite outro número: "))
+        var soma = n1 + n2       //number + number = adição // string + string = concatenação
+        document.writeln(`Seu nome: ${nome} - Resultado da soma: ${soma} \n`) */
+
+        var nome = prompt("Digite seu nome: ")
+        var idade = prompt("Digite sua idade: ")
+        var turma = prompt("Digite sua turma: ")
+
+        document.write(`O aluno ${nome} possui ${idade} anos e é da turma ${turma}. <br>`)    //${} placeholder > concatenação
+        document.write(`Seu nome possui ${nome.length} letras. ${nome.toUpperCase()}`)
+
+    </script>
+
+</body>
+</html>
